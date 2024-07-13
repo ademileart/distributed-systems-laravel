@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  auth_service:
+    container_name: auth
+    build:
+      context: ./AuthenticationMicroService
+      dockerfile: Dockerfile
+    volumes:
+      - ./AuthenticationMicroService:/var/www
+      - ./AuthenticationMicroService/database:/var/www/database
+      - ./AuthenticationMicroService/storage:/var/www/storage
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+  posts_service:
+    container_name: posts
+    build:
+      context: ./PostsMicroService
+      dockerfile: Dockerfile
+    volumes:
+      - ./PostsMicroService:/var/www
+      - ./PostsMicroService/database:/var/www/database
+      - ./PostsMicroService/storage:/var/www/storage
+
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - 6379:6379
+
+  proxy-server:
+    container_name: proxy-server
+    image: nginx
+    ports:
+      - 8080:80
+      - 443:443
+    volumes:
+      - ./reverse-proxy-default.conf:/etc/nginx/conf.d/default.conf
