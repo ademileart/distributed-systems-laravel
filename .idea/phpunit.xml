@@ -3,8 +3,8 @@
   <component name="PHPUnit">
     <option name="directories">
       <list>
-        <option value="$PROJECT_DIR$/PostsMicroService/tests" />
         <option value="$PROJECT_DIR$/AuthenticationMicroService/tests" />
+        <option value="$PROJECT_DIR$/PostsMicroService/tests" />
       </list>
     </option>
   </component>
