@@ -1,7 +1,7 @@
 Laravel Distributed System with Docker and SQLite
 This project demonstrates a distributed system architecture using Laravel, Docker, and SQLite. It consists of two separate microservices, each with its own SQLite database, and a proxy server that handles external requests.
 
- ![Infrastructure](/infrastructure.pdf)
+ ![Infrastructure](https://github.com/ademileart/distributed-systems-laravel/blob/main/infrastructure.pdf?raw=true)
 Overview
 The system is composed of:
 
