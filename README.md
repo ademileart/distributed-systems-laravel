@@ -30,6 +30,10 @@ Endpoints
 Authentication Microservice: Handles /auth endpoints for user registration, login, and authentication.
 Posts Microservice: Manages /posts endpoints for creating, reading, updating, and deleting posts.
 
+Example Request:
+ ![Infrastructure](https://github.com/ademileart/distributed-systems-laravel/blob/main/example-request-1.png?raw=true)
+
+
 Technologies
 
 
